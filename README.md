@@ -1,5 +1,4 @@
-[index_10.html](https://github.com/user-attachments/files/32039557/index_10.html)
-# Gurumo
+
 Gurumo
 <!DOCTYPE html>
 <html lang="ja">
