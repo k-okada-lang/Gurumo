@@ -1,7 +1,7 @@
-[index.html](https://github.com/user-attachments/files/32328979/index.html)
-<!DOCTYPE html>![Uploading ogp.png…]()
+[index.html](https://github.com/user-attachments/files/32329177/index.html)
+<!DOCTYPE html>
+<html lang="ja">![Uploading ogp.png…]()
 
-<html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -794,7 +794,7 @@ const siteStorage = {
 
 /* ---------------- data layer ---------------- */
 const STORAGE_KEY = 'goodtable:stores';
-const ADMIN_PASS = 'goodtable2026';
+const ADMIN_PASS = '5TXa2d29rAneSw';
 
 const DEFAULT_STORES = [
   {
@@ -2620,7 +2620,6 @@ function renderAdmin(){
         <div style="color:var(--text-muted); font-size:12.5px; line-height:1.8;">店舗情報の編集にはパスコードが必要です</div>
         <input type="password" id="admin-pass-input" placeholder="パスコードを入力">
         <button class="btn-search" style="width:100%;" onclick="tryAdminLogin()">ログイン</button>
-        <div class="hint">デモ用パスコード：goodtable2026</div>
       </div>`;
     return;
   }
@@ -3404,9 +3403,9 @@ HTML・CSS・JavaScriptをすべて `index.html` 1ファイルにまとめてあ
 
 ## アドミンのログイン
 
-デモ用パスコード：`goodtable2026`
+パスコードは `index.html` 内の `ADMIN_PASS` という定数に設定されています（このREADMEには載せていません。GitHub PagesなどでMarkdownがそのまま公開される場合があるため、パスコードをREADMEに書くのは避けてください）。
 
-`index.html` 内の `ADMIN_PASS` を書き換えることで変更できます。あくまで簡易的なフロントエンド側のロックであり、本番運用でセキュリティが必要な場合は、サーバー側の認証（例：パスワード保護されたAPI、Basic認証、GitHubに公開しない管理画面など）に置き換えることを推奨します。
+⚠️ **重要**：このロックはあくまで簡易的なフロントエンド側のもので、`index.html` はブラウザ側で誰でも中身を見られるファイルです。そのため `ADMIN_PASS` の値自体も、開発者ツールなどで見ようと思えば見られてしまいます。本番公開・第三者に見られたくない運用の場合は、`ADMIN_PASS` を初期値から必ず変更したうえで、可能であればサーバー側の認証（例：パスワード保護されたAPI、Basic認証、GitHubに公開しない管理画面など）への置き換えを検討してください。
 
 ## データの保存について（重要）
 
